@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-spacing: 10px;
+
+}
+
+.cards-raw {
+    display: table-row;
+}
+
+.card {
+    display: table-cell;
+    padding: 5px;
+}
