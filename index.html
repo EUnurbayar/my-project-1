@@ -8,30 +8,43 @@
     <link rel="stylesheet" href="./styles.css">
     <script defer src="./script.js"></script>
 </head>
-<body>
-    <h1>Memory Game</h1>
-    <p>Select the pairs of matching cards in the fewst number of guesses.</p>
-    <div class="Container">
-        <div class="cards-raw">
-            <div class="card" id="0"></div>
-            <div class="card" id="1"></div>
-            <div class="card" id="2"></div>
-            <div class="card" id="3"></div>
+    <header>
+        <button class="info-btn" id="dropDown">INFO</button>
+        <div id="info">
+            <div id="info-txt">
+                <h1>Dear Player!</h1>
+                <p>Select the pairs of matching cards in the fewst number of guesses.</p>
+                <p>Click on the card by bringing your cursor then press. </p>
+                <p>If you want to start over middle of the game press the "Reset" button.</p>
+                <p>If you want to play again press the "Play agian button."</p>
+                <div id="close-info">
+                    <button class="info-btn" id="close" href ="#">close</button>
+                </div>
+            </div>
         </div>
-        <div class="cards-raw"></div>
-            <div class="card" id="4"></div>
-            <div class="card" id="5"></div>
-            <div class="card" id="6"></div>
-            <div class="card" id="7"></div>
-        </div>
-        <div class="cards-raw">
-             <div class="card" id="8"></div>
-             <div class="card" id="9"></div>
-             <div class="card" id="10"></div>
-             <div class="card" id="11"></div> 
-         </div>
+    </header>
+  <body>
+   
+    <h1 class="title">Memory Card Game</h1>
+    <div class="container-cards">
+       
+            <div class="card-item card-row-0">0</div>
+            <div class="card-item card-row-1">1</div>
+            <div class="card-item card-row-2">2</div>
+            <div class="card-item card-row-3">3</div>
+       
+            <div class="card-item card-column-4">4</div>
+            <div class="card-item card-column-5">5</div>
+            <div class="card-item card-column-6">6</div>
+            <div class="card-item card-column-7">7</div>
+      
+            <div class="card-item card-row-8">8</div>
+            <div class="card-item card-row-9">9</div>
+            <div class="card-item card-row-10">10</div>
+            <div class="card-item card-row-11">11</div>
+       
     </div>
-
+    
     <div id="game-tracker">
         <p>Score: <span id="score"></span></p>
         <p>Moves: <span id="moves"></span></p>
