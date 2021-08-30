@@ -35,46 +35,50 @@ cards.forEach(el => el.addEventListener('click', event => {
   }));
 function clickHandler(event){
     event.preventDefault();
+    if(event.target.tagName ==='A'){
+
     count++;
     console.log(event);
     event.target.children[0].style.display="block";
     event.target.children[0].classList.add("active");
-    event.target.children[0].children[0].classList.add("classOfclicked")
-    if(count==2){
-        const clickedCards = document.getElementsByClassName("classOfclicked");
+    // event.target.children[0].children[0].classList.add("classOfclicked")
+    if(count===2){
+        // const clickedCards = document.getElementsByClassName("classOfclicked");
         const activeCards = document.getElementsByClassName("active")
     console.log(activeCards)
-        if(activeCards[activeCards.length-2].children[0].src != activeCards[activeCards.length-1].children[0].src)  {
+        if(activeCards[0].children[0].src !== activeCards[1].children[0].src)  {
            alert('noMatch')
             setTimeout(function(){ 
-                for(const activeCard of activeCards){
-                    // activeCard.classList.remove("active")
-                    activeCard.children[0].style.display="none";
-                    activeCard.children[0].classList.remove("active");
-                 
-                  console.log(activeCard)
-                }console.log(activeCards)
+                let i=0; 
+                while( i < 2){
+                    activeCards[0].style.display="none";
+                    activeCards[0].classList.remove("active")
+                    i++;
+                    
+                }
                 
-            }, 2000);
+            }, 100);
          
         }else{
             alert('match')
-            for(let activeCard of activeCards){
-                activeCard.classList.remove("active");
-            }
+            setTimeout(function(){ 
+                let i=0; 
+                while( i < 2){
+                    activeCards[0].classList.remove("active")
+                    i++;   
+                }
+            }, 100);
         }
         count=0;
         
         //document.getElementsByClassName("active").classList.remove("active");
     }
-    else{
-        curImgSrc = event.target.children[0].children[0].src;
-        }
+    // else{
+    //     curImgSrc = event.target.children[0].children[0].src;
+    //     }
+}
 }
 
-
-
-///////////////
 
 
 
