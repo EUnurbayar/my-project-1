@@ -1,18 +1,19 @@
 
 
-.info-btn {
+.info-btn{
+    display: flex;
+    justify-content: flex-start;
     padding: 14px 18px;
 	background-color:blanchedalmond;
 	border: none;
     border-radius: 15px;
 	outline: none;
 	color:lightsalmon;
-	
 	cursor: pointer;
 }
 
 #info {
-    display:block;
+    display:flex;
 	background-color: white;
     color:lightsalmon;
 	position: center;
@@ -21,6 +22,7 @@
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
+    justify-content: flex-start;
  
 	
 }
@@ -74,15 +76,7 @@ button {
 }
 .container-cards .card-item{
     background-color:orange ;
-    min-width: 100px;   
+    min-width: 100px;  
+    border-radius: 10px; 
 }
 
-/* .cards {
-
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-content: space-around;
-    width: fit-contents;
-
-} */
