@@ -75,8 +75,24 @@ button {
     grid-auto-rows: minmax(100px, auto);
 }
 .container-cards .card-item{
+    background-image: url('https://icons.iconarchive.com/icons/gianni-polito/colobrush/256/software-clone-cd-icon.png');
     background-color:orange ;
-    min-width: 100px;  
+    background-size: contain;
+    width: 100px;  
     border-radius: 10px; 
+    overflow: hidden;
+    height: 100px;
 }
 
+ #game-tracker {
+     font-size: 30px;
+     padding: 15px 15px;
+ }
+  
+ .card-item span{
+     display: none;   
+     
+ }
+ .card-item span img{
+     max-width: 100%;
+ }
