@@ -27,10 +27,12 @@ close.addEventListener('click', closed);
 let count = 0;
 let curImgSrc = '';
 let moveCount = 0;
-let score =0;
+let score = 0;
 
 const img = document.querySelector('img');
+
 const cards = document.querySelectorAll('.card-item');
+console.log(cards)
 
 
 cards.forEach( el => el.addEventListener('click', event => {
@@ -48,13 +50,14 @@ cards.forEach( el => el.addEventListener('click', event => {
     count++;
     moveCount++;
     // console.log(moveCount);
-    console.log(event);
+    // console.log(event);
     event.target.children[0].style.display="block";
+    // console.log(event.target.children[0])
     event.target.children[0].classList.add("active");
     
-    if(count===2){
+    if(count === 2) {
         const activeCards = document.getElementsByClassName("active");
-    // console.log(activeCards)
+    //  console.log(activeCards)
         if ( activeCards[0].children[0].src !== activeCards[1].children[0].src )  {
            alert('noMatch');
             setTimeout(function () { 
@@ -65,14 +68,14 @@ cards.forEach( el => el.addEventListener('click', event => {
                     i++;
                     
                 }
-                  
+
             }, 100);
          
         } else {
 
             score++;
-            // console.log(score)
             show();
+          
             setTimeout(function(){ 
                 let i = 0; 
                 while( i < 2 ){
@@ -87,20 +90,27 @@ cards.forEach( el => el.addEventListener('click', event => {
 }
 }
 
-const images = document.getElementsByClassName('container-cards');
-const newCards =[];
-const pairedCardNum = 6;
-
+const images = document.querySelector('.container-cards');
+// console.log(images)
+const allImage = document.getElementsByTagName('img');
+//  console.log(allImage)
 const reset = document.getElementById('reset');
 // console.log(reset);
 reset.addEventListener('click', action);
 
 
 function action(event) {
-    // console.log('clicked');
-
-
-   }
+    console.log( event.target.allImage)
+    for(let i=0; i < allImage.length; i++) {
+         allImage[i].style.display='none';
+   
+    }
+    
+//flipp cards over
+//reset the score 
+//reset moves
+//grab  all img loop thru them set to display none
+  }
 
 
 const won = document.querySelector('.winner-tag');

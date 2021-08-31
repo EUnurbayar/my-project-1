@@ -9,7 +9,11 @@
     <script defer src="./script.js"></script>
 </head>
   <body>
-    <button class="info-btn" id="dropDown">INFO</button>
+      <div class="buttons">
+        <button class="info-btn" id="dropDown">INFO</button>
+        <button type="button" class="reset"id="reset">Reset</button>
+      </div>
+    
     <div id="info">
         <div id="info-txt">
             <h1>Dear Player!</h1>
@@ -47,13 +51,8 @@
     </div>
     
     <div id="game-tracker">
-        <p>Score: <span id="score"></span></p>
+        <p >Score: <span id="score"></span></p>
         <p>Moves: <span id="moves"></span></p>
     </div>
-    <footer>
-        <button type="button" class="play-again">Play Again</button>
-        <button type="button" class="reset"id="reset">Reset</button>
-    </footer>
-    
 </body>
 </html>
