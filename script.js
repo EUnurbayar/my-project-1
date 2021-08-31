@@ -25,6 +25,8 @@ close.addEventListener('click', closed);
 // console.log(cardItem)
 let count = 0;
 let curImgSrc = '';
+let moveCount = 0;
+let score =0;
 
 const img = document.querySelector('img');
 const cards = document.querySelectorAll('.card-item');
@@ -32,12 +34,19 @@ const cards = document.querySelectorAll('.card-item');
 
 cards.forEach(el => el.addEventListener('click', event => {
     clickHandler(event);
+    const moves = document.getElementById("moves")
+    const point = document.getElementById("score")
+    moves.innerText = moveCount;
+    point.innerText = score;
   }));
-function clickHandler(event){
+    
+    function clickHandler(event){
     event.preventDefault();
     if(event.target.tagName ==='A'){
 
     count++;
+    moveCount++;
+    console.log(moveCount)
     console.log(event);
     event.target.children[0].style.display="block";
     event.target.children[0].classList.add("active");
@@ -61,6 +70,7 @@ function clickHandler(event){
          
         }else{
             alert('match')
+            score++;
             setTimeout(function(){ 
                 let i=0; 
                 while( i < 2){
@@ -70,14 +80,15 @@ function clickHandler(event){
             }, 100);
         }
         count=0;
+
         
-        //document.getElementsByClassName("active").classList.remove("active");
     }
-    // else{
-    //     curImgSrc = event.target.children[0].children[0].src;
-    //     }
 }
 }
+
+
+
+
 
 
 
