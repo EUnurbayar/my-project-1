@@ -1,5 +1,4 @@
 
-
 .info-btn{
     display: flex;
     justify-content: flex-start;
@@ -14,6 +13,7 @@
 
 #info {
     display:flex;
+    justify-content: flex-start;
 	background-color: white;
     color:lightsalmon;
 	position: center;
@@ -22,7 +22,7 @@
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-    justify-content: flex-start;
+    
  
 	
 }
@@ -95,4 +95,20 @@ button {
  }
  .card-item span img{
      max-width: 100%;
+ }
+
+ #score {
+     color: lightsalmon;
+ }
+ #moves {
+     color: orange;
+ }
+
+ p {
+     color:orange;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ img{
+     
+    width: 100%;
  }

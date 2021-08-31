@@ -50,11 +50,10 @@ cards.forEach(el => el.addEventListener('click', event => {
     console.log(event);
     event.target.children[0].style.display="block";
     event.target.children[0].classList.add("active");
-    // event.target.children[0].children[0].classList.add("classOfclicked")
+    
     if(count===2){
-        // const clickedCards = document.getElementsByClassName("classOfclicked");
         const activeCards = document.getElementsByClassName("active")
-    console.log(activeCards)
+    // console.log(activeCards)
         if(activeCards[0].children[0].src !== activeCards[1].children[0].src)  {
            alert('noMatch')
             setTimeout(function(){ 
@@ -86,11 +85,19 @@ cards.forEach(el => el.addEventListener('click', event => {
 }
 }
 
+const images = document.getElementsByClassName('container-cards')
+const newCards =[];
+const pairedCardNum = 6;
+
+const reset = document.getElementById('reset');
+console.log(reset)
+reset.addEventListener('click', action) 
 
 
-
-
-
+function action(event) {
+    console.log('clicked')
+    }
+    
 
 
 
