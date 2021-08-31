@@ -1,4 +1,5 @@
 
+
 .info-btn{
     display: flex;
     justify-content: flex-start;
@@ -9,11 +10,12 @@
 	outline: none;
 	color:lightsalmon;
 	cursor: pointer;
+    align-items: flex-start;
 }
 
 #info {
-    display:flex;
-    justify-content: flex-start;
+    /* display:flex;
+    justify-content: flex-start; */
 	background-color: white;
     color:lightsalmon;
 	position: center;
@@ -22,9 +24,6 @@
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-    
- 
-	
 }
 
 #info-text {
@@ -40,14 +39,19 @@
 
 }
 
-#close-info{
+/* #close-info{
     text-align: rigth;
 
-}
-body {
+} */
+
+
+@media (min-width: 500px) {
+     body  {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
 }
 .title {
     color: lightsalmon;
@@ -56,13 +60,14 @@ body {
 }
 
 button {
+   
     background-color:blanchedalmond;
-    border-radius: 15px;
+    border-radius: 10px;
     color: lightsalmon;
     border:none;
     font-size: 20px;
-    padding: 15px 15px ;
-    margin: 100px;
+    /* padding: 15px 15px ;
+    margin: 100px; */
 }
 
 .container-cards {  
@@ -108,7 +113,14 @@ button {
      color:orange;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
- img{
+ @media (max-with:600px) {
      
+ img{
+
     width: 100%;
  }
+ }
+  .winner-tag {
+      display: none;
+      
+  }   
