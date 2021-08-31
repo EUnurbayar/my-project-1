@@ -47,7 +47,7 @@ cards.forEach( el => el.addEventListener('click', event => {
 
     count++;
     moveCount++;
-    console.log(moveCount);
+    // console.log(moveCount);
     console.log(event);
     event.target.children[0].style.display="block";
     event.target.children[0].classList.add("active");
@@ -65,12 +65,14 @@ cards.forEach( el => el.addEventListener('click', event => {
                     i++;
                     
                 }
-                
+                  
             }, 100);
          
         } else {
-            // alert('match');
+
             score++;
+            // console.log(score)
+            show();
             setTimeout(function(){ 
                 let i = 0; 
                 while( i < 2 ){
@@ -95,20 +97,19 @@ reset.addEventListener('click', action);
 
 
 function action(event) {
-    console.log('clicked');
-    }
-    
+    // console.log('clicked');
 
 
-const won = document.getElementsByClassName('winner-tag');
-console.log(won)
+   }
 
+
+const won = document.querySelector('.winner-tag');
 function show() {
     if (score === 6){
         won.style.display = 'block'
-       console.log(show)
+    //    console.log(show)
     }
 }
 
-   
+  
 
