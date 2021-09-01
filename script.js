@@ -30,15 +30,14 @@ let moveCount = 0;
 let score = 0;
 
 const img = document.querySelector('img');
-
 const cards = document.querySelectorAll('.card-item');
-console.log(cards)
+// console.log(cards)
 
 
 cards.forEach( el => el.addEventListener('click', event => {
     clickHandler(event);
     const moves = document.getElementById("moves");
-    const point = document.getElementById("score");
+    const point = document.querySelector("#score");
     moves.innerText = moveCount;
     point.innerText = score;
   }));
@@ -99,17 +98,16 @@ const reset = document.getElementById('reset');
 reset.addEventListener('click', action);
 
 
-function action(event) {
-    console.log( event.target.allImage)
+function action() {
+    
     for(let i=0; i < allImage.length; i++) {
          allImage[i].style.display='none';
-   
-    }
-    
-//flipp cards over
-//reset the score 
-//reset moves
-//grab  all img loop thru them set to display none
+         won.style.display = 'none'
+         moves.innerText = 0;
+         score.innerText == 0;
+  }
+    location.reload();
+
   }
 
 
