@@ -8,12 +8,12 @@
 - CSS 
 - JavaScript 
 
-#### Installation Instructions
+##### Installation Instructions
 - Fork and clone this repo
 - Open index.html file and run a live server
 - The Memory Game will show up on the browser ready for play
 
-#### User Stories
+##### User Stories
 - As a player, I want to enjoy the game
 - As a player , I want to see funn images
 - As a player , I want to improve my game skill on the game
@@ -23,7 +23,7 @@
  - Create a working game 
  - Track players score and moves correctly
  - visually enjoyable images for the player
-### Strech Goal 
+##### Stretch Goal 
 
   - Add level for challene the players
 
@@ -33,7 +33,7 @@
 - Unsolved probles was creating more levels for the game
 - Needs more work on the CSS!
 
-###### Wire Frame 
+### Wire Frame 
 
 - ![Project1 Wire Frame](https://user-images.githubusercontent.com/74628166/131695679-096a1e43-96ec-4ecf-a4f4-e25c589f5357.png)
 
